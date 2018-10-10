@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LoginInput from "./LoginInput";
 
 class App extends Component {
+  createAccount(){
+    console.log('hello');
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="createAccount">
+          <h1>Create an Account</h1>
+          <h2>Another line of text</h2>
+          <LoginInput type="name"></LoginInput>
+          <LoginInput type="email"></LoginInput>
+          <LoginInput type="mobile"></LoginInput>
+          <LoginInput type="password"></LoginInput>
+          <button onClick={this.createAccount}>Create</button>
+        </div>
       </div>
     );
   }
